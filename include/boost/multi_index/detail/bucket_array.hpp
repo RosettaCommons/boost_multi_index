@@ -48,7 +48,7 @@ namespace detail{
 (50331653ul)(100663319ul)(201326611ul)(402653189ul)(805306457ul)          \
 (1610612741ul)(3221225473ul)
 
-#if ((((ULONG_MAX>>16)>>16)>>16)>>15)==0 /* unsigned long less than 64 bits */
+#if defined(PYROSETTA) || ((((ULONG_MAX>>16)>>16)>>16)>>15)==0 /* unsigned long less than 64 bits */
 #define BOOST_MULTI_INDEX_BA_SIZES                                         \
 BOOST_MULTI_INDEX_BA_SIZES_32BIT                                           \
 (4294967291ul)
